@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: hoquocdev-server
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: ADMIN_SECRET
+        value: hoquocdev123
+      - key: FIREBASE_CREDENTIALS
+        sync: false
+      - key: FIREBASE_DB_URL
+        value: https://hoquocdev-server-default-rtdb.asia-southeast1.firebasedatabase.app

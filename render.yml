@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: key-server
+    env: docker
+    plan: free
+    envVars:
+      - key: BASE_URL
+        value: https://key-server.onrender.com
+      - key: ADMIN_PASSWORD
+        value: doimatkhaunay

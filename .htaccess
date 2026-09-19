@@ -1,0 +1,4 @@
+# Telegram credentials and logs must not be served as static downloads.
+<FilesMatch "^(telegram_.*\.json|skills-lock\.json|Untitled-1\.txt)$">
+    Require all denied
+</FilesMatch>
